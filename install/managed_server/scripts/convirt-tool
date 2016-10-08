@@ -244,7 +244,7 @@ fi
 echo "Virtualization platform $v_platform Version $v_platform_ver "
 OS_NAME="${DIST} ${VER}"
 OS_BASE_NAME=`echo $OS_NAME | cut -d\. -f1`
-if [ "$OS_BASE_NAME" != "RedHat 5" ] && [ "$OS_BASE_NAME" != "CentOS 5" ] && [ "$OS_BASE_NAME" != "RedHat 6" ] && [ "$OS_BASE_NAME" != "CentOS 6" ] &&
+if [ "$OS_BASE_NAME" != "RedHat 5" ] && [ "$OS_BASE_NAME" != "CentOS 5" ] && [ "$OS_BASE_NAME" != "RedHat 6" ] && [ "$OS_BASE_NAME" != "CentOS 6" ] && [ "$OS_BASE_NAME" != "RedHat 7" ] &&
 [ "$OS_BASE_NAME" != "Ubuntu 8" ] && [ "$OS_BASE_NAME" != "Ubuntu 9" ] &&
 [ "$OS_BASE_NAME" != "Ubuntu 10" ] && [ "$OS_BASE_NAME" != "Ubuntu 11" ] && [ "$OS_BASE_NAME" != "Ubuntu 12" ]&& [ "$OS_BASE_NAME" != "SLES 10" ] &&
 [ "$OS_BASE_NAME" != "SLES 11" ] && [ "$OS_BASE_NAME" != "Debian 5" ] ; then
