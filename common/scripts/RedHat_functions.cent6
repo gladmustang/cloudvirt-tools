@@ -37,8 +37,13 @@ get_xen_userspace_ver()
 
 #install convirt tool dependencies
 install_dependencies(){
-     $SUDO yum localinstall tunctl-1.5-12.fc22.x86_64.rpm
-     $SUDO yum -y install dnsmasq tunctl tcp_wrappers socat expect pexpect 
+   cd /etc/yum.repos.d
+   if [ "${VER%.*}" == "6" ]; then
+      wget --no-cache http://www.convirture.com/repos/definitions/rhel/6.x/convirt.repo
+   else
+      wget --no-cache http://www.convirture.com/repos/definitions/rhel/5.x/convirt.repo
+   fi
+   $SUDO yum -y install dnsmasq tunctl tcp_wrappers socat expect pexpect 
 }
 
 ##seed_config()
